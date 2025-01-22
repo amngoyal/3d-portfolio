@@ -18,16 +18,19 @@ const Navbar = () => {
       <div className="flex justify-between items-center mx-auto w-full max-w-7xl">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-0"
           onClick={() => {
             setActive('');
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="flex font-bold text-[18px] text-white cursor-pointer">
+          <img src={logo} alt="logo" className="w-9 h-9" />
+          {/* <p className="flex font-bold text-[18px] text-white cursor-pointer">
             Aman &nbsp;
             <span className="sm:block hidden">| Frontend Developer</span>
+          </p> */}
+          <p className="font-extrabold text-3xl tracking-wider">
+            man<span className="text-[#915eff]">.dev</span>
           </p>
         </Link>
         <ul className="sm:flex flex-row gap-10 hidden list-none">

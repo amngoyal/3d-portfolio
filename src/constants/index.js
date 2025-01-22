@@ -1,24 +1,19 @@
 import {
   backend,
   carrent,
-  creator,
   css,
-  docker,
-  figma,
   git,
   html,
   javascript,
   jobit,
-  meta,
-  mobile,
   mongodb,
   nodejs,
+  qed42,
+  rapid,
   reactjs,
   redux,
-  shopify,
-  starbucks,
+  squareboat,
   tailwind,
-  tesla,
   threejs,
   tripguide,
   typescript,
@@ -46,16 +41,8 @@ const services = [
     icon: web,
   },
   {
-    title: 'React Native Developer',
-    icon: mobile,
-  },
-  {
     title: 'Backend Developer',
     icon: backend,
-  },
-  {
-    title: 'Content Creator',
-    icon: creator,
   },
 ];
 
@@ -104,67 +91,63 @@ const technologies = [
     name: 'git',
     icon: git,
   },
-  {
-    name: 'figma',
-    icon: figma,
-  },
-  {
-    name: 'docker',
-    icon: docker,
-  },
 ];
 
 const experiences = [
   {
-    title: 'React.js Developer',
-    company_name: 'Starbucks',
-    icon: starbucks,
-    iconBg: '#383E56',
-    date: 'March 2020 - April 2021',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'React Native Developer',
-    company_name: 'Tesla',
-    icon: tesla,
+    title: 'Senior Javascript Engineer',
+    company_name: 'Qed42',
+    icon: qed42,
     iconBg: '#E6DEDD',
-    date: 'Jan 2021 - Feb 2022',
+    date: 'April 2024 - Present',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
+      'Improving web performance of kotaksecurities.com and core web vitals for better user experience and SEO rankings.',
+      'Identifying and resolving issues in deployed production websites to ensure stability and seamless user experience.',
+      'Working closely with stakeholders and cross-functional teams to ensure alignment with project goals and business requirements.',
       'Participating in code reviews and providing constructive feedback to other developers.',
+      'Upgrading Next.js versions to leverage the latest features and maintain compatibility with modern technologies.',
+      'Collaborating with clients to gather requirements and align tasks with the development team for effective execution.',
     ],
   },
   {
-    title: 'Web Developer',
-    company_name: 'Shopify',
-    icon: shopify,
+    title: 'Javascript Engineer',
+    company_name: 'Qed42',
+    icon: qed42,
+    iconBg: '#E6DEDD',
+    date: 'April 2022 - March 2024',
+    points: [
+      'Designed and implemented pre-login static pages for the Kotak Securities website, highlighting various financial products and enhancing user engagement.',
+      'Created a scalable and reusable components library for Kotak Securities, ensuring design consistency and efficient development workflows across multiple projects.',
+      'Optimized the performance of web pages by leveraging Static Site Generation (SSG) and Server-Side Rendering (SSR) for faster loading times and improved SEO.',
+      'Worked closely with backend developers and product managers to ensure seamless integration and alignment with business requirements.',
+      'Focused on responsive and accessible designs to deliver a user-friendly experience across devices.',
+    ],
+  },
+  {
+    title: 'Frontend Engineer',
+    company_name: 'Squareboat',
+    icon: squareboat,
     iconBg: '#383E56',
-    date: 'Jan 2022 - Jan 2023',
+    date: 'May 2021 - Feb 2022',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Worked on Strapi CMS for the content management of the Star Health Insurance website, ensuring seamless updates and efficient handling of dynamic content.',
+      'Contributed to the frontend development of the Star Health Insurance website using React.js, focusing on responsive designs and user-friendly interfaces.',
+      'Developed a feature-rich dashboard for a US-based company, Humanity Health, using React.js, Redux, and React Router, providing an intuitive user experience and robust state management.',
+      'Delivered a responsive and accessible dashboard, ensuring usability across devices and adhering to accessibility standards.',
     ],
   },
   {
-    title: 'Full stack Developer',
-    company_name: 'Meta',
-    icon: meta,
+    title: 'Trainee Software Developer',
+    company_name: 'Rapid Innovation',
+    icon: rapid,
     iconBg: '#E6DEDD',
     date: 'Jan 2023 - Present',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Gained experience in developing and deploying blockchain smart contracts using Solidity.',
+      'Integrated smart contracts into React applications for seamless blockchain interaction.',
+      'Worked with Web3.js to handle blockchain transactions and interactions.',
+      'Explored decentralized application (dApp) development with blockchain and modern web technologies.',
+      'Focused on optimizing smart contracts for gas efficiency and ensuring security.',
     ],
   },
 ];
@@ -172,46 +155,39 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
-    image: 'https://randomuser.me/api/portraits/women/4.jpg',
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: 'Chris Brown',
-    designation: 'COO',
-    company: 'DEF Corp',
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: 'Lisa Wang',
-    designation: 'CTO',
-    company: '456 Enterprises',
-    image: 'https://randomuser.me/api/portraits/women/6.jpg',
+      'Aman evolved as a compelling professional from a simple undergraduate student in just a few months. I have known Aman for a year now, and he started his first internship with our organization. He is always keen on learning new skills, and I have been amazed by his innate capacity to acquire new skills. An extremely hard-working, sincere and humble person, Aman is truly a gem to have in the team.',
+    name: 'Saurav K Mitra',
+    designation: 'Founder & CEO',
+    company: 'Noisiv Consulting',
+    image:
+      'https://media.licdn.com/dms/image/v2/C4D03AQEESaJmJWH2-Q/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1650443525190?e=1743033600&v=beta&t=irAxnGiDu-uKpPlkAoOus3zE_m4BZzAmx7ghVU-gnYo',
   },
 ];
 
 const projects = [
   {
-    name: 'Car Rent',
+    name: 'Fullstack project: PeTrack',
     description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+      'PetTrack lets pet owners list their pets with QR codes on collars, helping find lost pets quickly and reunite them with their owners.',
     tags: [
       {
-        name: 'react',
+        name: 'Next.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
+        name: 'TailwindCSS',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'Node Js',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'Express Js',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'Mongo Db',
         color: 'pink-text-gradient',
       },
     ],
@@ -263,4 +239,3 @@ const projects = [
 ];
 
 export { experiences, projects, services, technologies, testimonials };
-

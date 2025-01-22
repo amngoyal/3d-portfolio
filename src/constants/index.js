@@ -141,7 +141,7 @@ const experiences = [
     company_name: 'Rapid Innovation',
     icon: rapid,
     iconBg: '#E6DEDD',
-    date: 'Jan 2023 - Present',
+    date: 'Jan 2021 - May 2021',
     points: [
       'Gained experience in developing and deploying blockchain smart contracts using Solidity.',
       'Integrated smart contracts into React applications for seamless blockchain interaction.',

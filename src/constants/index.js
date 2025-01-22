@@ -114,7 +114,7 @@ const experiences = [
     company_name: 'Qed42',
     icon: qed42,
     iconBg: '#E6DEDD',
-    date: 'April 2022 - March 2024',
+    date: 'January 2022 - March 2024',
     points: [
       'Designed and implemented pre-login static pages for the Kotak Securities website, highlighting various financial products and enhancing user engagement.',
       'Created a scalable and reusable components library for Kotak Securities, ensuring design consistency and efficient development workflows across multiple projects.',
@@ -128,7 +128,7 @@ const experiences = [
     company_name: 'Squareboat',
     icon: squareboat,
     iconBg: '#383E56',
-    date: 'May 2021 - Feb 2022',
+    date: 'May 2021 - January 2022',
     points: [
       'Worked on Strapi CMS for the content management of the Star Health Insurance website, ensuring seamless updates and efficient handling of dynamic content.',
       'Contributed to the frontend development of the Star Health Insurance website using React.js, focusing on responsive designs and user-friendly interfaces.',
@@ -141,7 +141,7 @@ const experiences = [
     company_name: 'Rapid Innovation',
     icon: rapid,
     iconBg: '#E6DEDD',
-    date: 'Jan 2021 - May 2021',
+    date: 'January 2021 - May 2021',
     points: [
       'Gained experience in developing and deploying blockchain smart contracts using Solidity.',
       'Integrated smart contracts into React applications for seamless blockchain interaction.',

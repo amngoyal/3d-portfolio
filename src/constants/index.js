@@ -103,10 +103,8 @@ const experiences = [
     points: [
       'Improving web performance of kotaksecurities.com and core web vitals for better user experience and SEO rankings.',
       'Identifying and resolving issues in deployed production websites to ensure stability and seamless user experience.',
-      'Working closely with stakeholders and cross-functional teams to ensure alignment with project goals and business requirements.',
       'Participating in code reviews and providing constructive feedback to other developers.',
-      'Upgrading Next.js versions to leverage the latest features and maintain compatibility with modern technologies.',
-      'Collaborating with clients to gather requirements and align tasks with the development team for effective execution.',
+      'Working closely with clients and cross-functional teams to gather requirements and align tasks with the development team for effective execution.',
     ],
   },
   {

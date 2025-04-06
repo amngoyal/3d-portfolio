@@ -1,8 +1,22 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Check on mount
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section className="relative mx-auto w-full h-screen">
       <div
@@ -18,17 +32,26 @@ const Hero = () => {
             <span className="text-[#915eff]">Aman</span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100`}>
-            {"I'm a full stack developer with a "}
-            <br className="sm:block hidden" /> passion for creating web
-            applications.
+            {"I'm a full stack developer with a  passion for creating"}
+            <br className="hidden sm:block" /> web applications having 5+ years
+            of experience.
           </p>
         </div>
       </div>
-      <ComputersCanvas />
 
-      <div className="bottom-32 xs:bottom-10 absolute flex justify-center items-center w-full">
+      {isMobile ? (
+        <img
+          src="/model.webp"
+          alt="Computers Canvas"
+          className="bottom-[30%] absolute w-full h-auto"
+        />
+      ) : (
+        <ComputersCanvas />
+      )}
+
+      <div className="bottom-[70px] xs:bottom-10 absolute flex justify-center items-center w-full">
         <a href="#about">
-          <div className="flex justify-center items-start border-4 border-secondary p-2 rounded-3xl w-[35px] h-[64px]">
+          <div className="flex justify-center items-start p-2 border-4 border-secondary rounded-3xl w-[35px] h-[64px]">
             <motion.div
               animate={{
                 y: [0, 24, 0],

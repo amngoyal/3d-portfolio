@@ -236,4 +236,26 @@ const projects = [
   },
 ];
 
-export { experiences, projects, services, technologies, testimonials };
+const contactLinks = [
+  {
+    name: 'Twitter',
+    imgSrc: '/twit.svg',
+    href: 'https://x.com/amngoyal_',
+    alt: "Twitter",
+  },
+  {
+    name: 'GitHub',
+    imgSrc: '/git.svg',
+    href: 'https://github.com/amngoyal',
+    alt: "Github",
+  },
+  {
+    name: 'LinkedIn',
+    imgSrc: '/link.svg',
+    href: 'https://www.linkedin.com/in/amngoyal/',
+    alt: "Linkedin",
+  },
+];
+
+export { contactLinks, experiences, projects, services, technologies, testimonials };
+

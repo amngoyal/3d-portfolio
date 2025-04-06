@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
+import { contactLinks } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { slideIn } from '../utils/motion';
@@ -87,7 +88,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className="bg-tertiary px-6 py-4 border-none rounded-lg font-medium text-white placeholder:text-secondary outline-none"
+              className="bg-tertiary px-6 py-4 border-none rounded-lg outline-none font-medium text-white placeholder:text-secondary"
             />
           </label>
           <label className="flex flex-col">
@@ -98,7 +99,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className="bg-tertiary px-6 py-4 border-none rounded-lg font-medium text-white placeholder:text-secondary outline-none"
+              className="bg-tertiary px-6 py-4 border-none rounded-lg outline-none font-medium text-white placeholder:text-secondary"
             />
           </label>
           <label className="flex flex-col">
@@ -109,17 +110,30 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
-              className="bg-tertiary px-6 py-4 border-none rounded-lg font-medium text-white placeholder:text-secondary outline-none"
+              className="bg-tertiary px-6 py-4 border-none rounded-lg outline-none font-medium text-white placeholder:text-secondary"
             />
           </label>
 
           <button
             type="submit"
-            className="bg-tertiary shadow-md shadow-primary px-8 py-3 rounded-xl w-fit font-bold text-white outline-none"
+            className="bg-tertiary shadow-md shadow-primary px-8 py-3 rounded-xl outline-none w-fit font-bold text-white"
           >
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
+
+        <div className="flex justify-center gap-6 mt-8">
+          {contactLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={link.imgSrc} alt={link.alt} className="w-8 h-8" />
+            </a>
+          ))}
+        </div>
       </motion.div>
 
       <motion.div

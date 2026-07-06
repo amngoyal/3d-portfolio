@@ -33,7 +33,7 @@ const Navbar = () => {
             man<span className="text-[#915eff]">.dev</span>
           </p>
         </Link>
-        <ul className="sm:flex flex-row gap-10 hidden list-none">
+        <ul className="lg:flex flex-row gap-10 hidden list-none">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -46,7 +46,15 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="flex flex-1 justify-end items-center sm:hidden">
+        <a
+          href="https://drive.google.com/drive/folders/13-ed-g1u9CIfvGYYAkyZk4sFQUf8Mw_B?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="hidden lg:inline-flex items-center justify-center rounded-xl border border-[#915eff]/40 bg-[#915eff]/10 px-4 py-2 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#915eff]/70 hover:bg-[#915eff]/20"
+        >
+          Resume
+        </a>
+        <div className="flex flex-1 justify-end items-center lg:hidden">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -56,7 +64,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? 'hidden' : 'flex'
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[180px] z-10 rounded-xl`}
           >
             <ul className="flex flex-col justify-end items-start gap-4 list-none">
               {navLinks.map((link) => (
@@ -73,6 +81,16 @@ const Navbar = () => {
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
+              <li className="pt-2">
+                <a
+                  href="https://drive.google.com/drive/folders/13-ed-g1u9CIfvGYYAkyZk4sFQUf8Mw_B?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-xl border border-[#915eff]/40 bg-[#915eff]/10 px-4 py-2 font-semibold text-white transition-all duration-300 hover:border-[#915eff]/70 hover:bg-[#915eff]/20"
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>

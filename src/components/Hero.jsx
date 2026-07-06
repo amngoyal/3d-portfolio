@@ -31,11 +31,10 @@ const Hero = () => {
             {"Hi, I'm "}
             <span className="text-[#915eff]">Aman</span>
           </h1>
-          <p className={`${styles.heroSubText} text-white-100`}>
-            {"I'm a full stack developer with a  passion for creating"}
-            <br className="hidden sm:block" /> web applications having 5+ years
-            of experience.
-          </p>
+          <p className={`${styles.heroSubText} max-w-4xl text-white-100`}>
+            Senior Frontend Engineer specializing in React, Next.js,
+            architecture, Core Web Vitals, SEO, and high-performance web apps.
+            </p>          
         </div>
       </div>
 

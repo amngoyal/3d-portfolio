@@ -52,12 +52,19 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 max-w-3xl text-[17px] text-secondary leading-[30px]"
       >
-        I&apos;m a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I&apos;m a quick learner and collaborate closely with clients
-        to create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let&apos;s work together to bring your ideas to
-        life!
+        I build React and Next.js products with a focus on frontend
+        architecture, performance, and SEO. My work usually lives at the
+        intersection of clean UX, strong Core Web Vitals, and scalable
+        component systems.
+      </motion.p>
+      <motion.p
+        variants={fadeIn('', '', 0.2, 1)}
+        className="mt-4 max-w-3xl text-[17px] text-secondary leading-[30px]"
+      >
+        I&apos;ve led frontend teams through migrations, reusable library
+        design, and product modernization. The goal is always the same: ship
+        polished interfaces that are fast, maintainable, and easy for teams to
+        extend.
       </motion.p>
 
       <div className="flex flex-wrap justify-center gap-10 mt-20">

@@ -10,6 +10,48 @@ import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { textVariant } from '../utils/motion';
 
+const highlightTerms = [
+  'Next.js',
+  'Core Web Vitals',
+  'SEO',
+  'Leadership',
+  'Migration',
+  'SSG/SSR',
+  'Component Library',
+  'Mentoring',
+  'React',
+  'Redux',
+  'Strapi',
+  'Web3.js',
+  'TypeScript',
+  'Tailwind',
+];
+
+const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const highlightText = (text) => {
+  const pattern = new RegExp(
+    `(${highlightTerms.map(escapeRegex).join('|')})`,
+    'gi'
+  );
+
+  return text.split(pattern).map((segment, index) => {
+    const isMatch = highlightTerms.some(
+      (term) => term.toLowerCase() === segment.toLowerCase()
+    );
+
+    if (!isMatch) {
+      return segment;
+    }
+
+    return (
+      <span key={`${segment}-${index}`} className="font-semibold text-white">
+        {segment}
+      </span>
+    );
+  });
+};
+
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
@@ -26,26 +68,42 @@ const ExperienceCard = ({ experience }) => {
           />
         </div>
       }
-    >
-      <div>
-        <h3 className="font-bold text-[24px] text-white">{experience.title}</h3>
-        <p
-          className="font-semibold text-[16px] text-secondary"
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
-      </div>
+      >
+        <div>
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <h3 className="font-bold text-[24px] text-white">
+                {experience.title}
+              </h3>
+              <p className="!m-0 font-semibold text-[16px] text-secondary">
+                {experience.company_name}
+              </p>
+            </div>
+            {/* <p className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.16em] text-secondary">
+              {experience.date}
+            </p> */}
+          </div>
+        </div>
       <ul className="space-y-2 mt-5 ml-5 list-disc">
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="pl-1 text-[14px] text-white-100 tracking-wider"
+            className="pl-1 text-[14px] text-white-100 tracking-wider leading-6"
           >
-            {point}
+            {highlightText(point)}
           </li>
         ))}
       </ul>
+      <div className="flex flex-wrap gap-2 mt-6">
+        {experience.chips.map((chip) => (
+          <span
+            key={chip}
+            className="rounded-full border border-[#915eff]/30 bg-[#915eff]/10 px-3 py-1 text-[12px] font-medium text-[#cbb6ff]"
+          >
+            {chip}
+          </span>
+        ))}
+      </div>
     </VerticalTimelineElement>
   );
 };
@@ -58,6 +116,7 @@ ExperienceCard.propTypes = {
     company_name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     points: PropTypes.arrayOf(PropTypes.string).isRequired,
+    chips: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 };
 
@@ -65,7 +124,7 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()} initial="hidden" whileInView="show">
-        <p className={styles.sectionSubText}>What I have done so far</p>
+        <p className={styles.sectionSubText}>Recent roles and impact</p>
         <h2 className={styles.sectionHeadText}>Work Experience.</h2>
       </motion.div>
       <div className="flex flex-wrap gap-7 mt-20">

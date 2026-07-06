@@ -1,6 +1,4 @@
-import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { useRef, useState } from 'react';
 import { contactLinks } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
@@ -8,61 +6,7 @@ import { slideIn } from '../utils/motion';
 import { EarthCanvas } from './canvas';
 
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: import.meta.env.VITE_APP_EMAILJS_TO_NAME,
-          from_email: form.email,
-          to_email: import.meta.env.VITE_APP_EMAILJS_TO_EMAIL,
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
-
-          setForm({
-            name: '',
-            email: '',
-            message: '',
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert('Ahh, something went wrong. Please try again.');
-        }
-      );
-  };
+  const contactEmail = 'amangoyal1198@gmail.com';
 
   return (
     <div
@@ -75,52 +19,22 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-8 mt-12"
-        >
-          <label className="flex flex-col">
-            <span className="mb-4 font-medium text-white">Your Name</span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className="bg-tertiary px-6 py-4 border-none rounded-lg outline-none font-medium text-white placeholder:text-secondary"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="mb-4 font-medium text-white">Your email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-              className="bg-tertiary px-6 py-4 border-none rounded-lg outline-none font-medium text-white placeholder:text-secondary"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="mb-4 font-medium text-white">Your Message</span>
-            <textarea
-              rows={7}
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="What you want to say?"
-              className="bg-tertiary px-6 py-4 border-none rounded-lg outline-none font-medium text-white placeholder:text-secondary"
-            />
-          </label>
-
-          <button
-            type="submit"
-            className="bg-tertiary shadow-md shadow-primary px-8 py-3 rounded-xl outline-none w-fit font-bold text-white"
+        <div className="mt-8 rounded-2xl border border-white/10 bg-tertiary/80 p-8 shadow-[0_0_30px_rgba(0,0,0,0.25)]">
+          <p className="text-secondary text-lg">Let&apos;s build something meaningful</p>
+          <h3 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
+            Let&apos;s talk.
+          </h3>
+          <p className="mt-4 max-w-xl text-base leading-7 text-secondary">
+            I&apos;m currently open to new opportunities, freelance collaborations, and conversations around thoughtful digital experiences.
+          </p>
+          <a
+            href={`mailto:${contactEmail}`}
+            className="mt-6 inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3 font-semibold text-white transition hover:opacity-90"
           >
-            {loading ? 'Sending...' : 'Send'}
-          </button>
-        </form>
+            <span className="text-lg">✉️</span>
+            <span>{contactEmail}</span>
+          </a>
+        </div>
 
         <div className="flex justify-center gap-6 mt-8">
           {contactLinks.map((link, index) => (

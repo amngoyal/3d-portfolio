@@ -1,11 +1,16 @@
 import {
   backend,
-  carrent,
+  claude,
+  codex,
+  copilot,
   css,
+  cursor,
+  docker,
+  figma,
   git,
+  graphqlLogo,
   html,
   javascript,
-  jobit,
   mongodb,
   nodejs,
   qed42,
@@ -13,11 +18,13 @@ import {
   reactjs,
   redux,
   squareboat,
+  strapi,
+  storybook,
   tailwind,
-  threejs,
-  tripguide,
   typescript,
+  v0,
   web,
+  creator,
 } from '../assets';
 
 export const navLinks = [
@@ -27,7 +34,19 @@ export const navLinks = [
   },
   {
     id: 'work',
-    title: 'Work',
+    title: 'Experience',
+  },
+  {
+    id: 'tech',
+    title: 'Skills',
+  },
+  {
+    id: 'projects',
+    title: 'Projects',
+  },
+  {
+    id: 'writing',
+    title: 'Writing',
   },
   {
     id: 'contact',
@@ -37,88 +56,149 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Web Developer',
+    title: 'Frontend Architecture',
     icon: web,
   },
   {
-    title: 'Backend Developer',
+    title: 'Performance & SEO',
     icon: backend,
+  },
+  {
+    title: 'Team Leadership',
+    icon: creator,
   },
 ];
 
-const technologies = [
+const skillGroups = [
   {
-    name: 'HTML 5',
-    icon: html,
+    title: 'Frontend',
+    description: 'Modern UI engineering and client-side architecture',
+    skills: [
+      {
+        name: 'React',
+        icon: reactjs,
+      },
+      {
+        name: 'Next.js',
+        icon: web,
+      },
+      {
+        name: 'HTML',
+        icon: html,
+      },
+      {
+        name: 'CSS',
+        icon: css,
+      },
+      {
+        name: 'TypeScript',
+        icon: typescript,
+      },
+      {
+        name: 'JavaScript',
+        icon: javascript,
+      },
+      {
+        name: 'Redux',
+        icon: redux,
+      },
+      {
+        name: 'Tailwind',
+        icon: tailwind,
+      },
+      {
+        name: 'GraphQL',
+        icon: graphqlLogo,
+      },
+      {
+        name: 'Storybook',
+        icon: storybook,
+      },
+    ],
   },
   {
-    name: 'CSS 3',
-    icon: css,
+    title: 'Backend',
+    description: 'Data, APIs, and CMS-driven delivery',
+    skills: [
+      {
+        name: 'Node.js',
+        icon: nodejs,
+      },
+      {
+        name: 'Express',
+        icon: backend,
+      },
+      {
+        name: 'MongoDB',
+        icon: mongodb,
+      },
+      {
+        name: 'Strapi',
+        icon: strapi,
+      },
+    ],
   },
   {
-    name: 'JavaScript',
-    icon: javascript,
-  },
-  {
-    name: 'TypeScript',
-    icon: typescript,
-  },
-  {
-    name: 'React JS',
-    icon: reactjs,
-  },
-  {
-    name: 'Redux Toolkit',
-    icon: redux,
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: tailwind,
-  },
-  {
-    name: 'Node JS',
-    icon: nodejs,
-  },
-  {
-    name: 'MongoDB',
-    icon: mongodb,
-  },
-  {
-    name: 'Three JS',
-    icon: threejs,
-  },
-  {
-    name: 'git',
-    icon: git,
+    title: 'Tools',
+    description: 'Shipping, collaboration, and AI workflows',
+    skills: [
+      {
+        name: 'Git',
+        icon: git,
+      },
+      {
+        name: 'GitHub Copilot',
+        icon: copilot,
+      },
+      {
+        name: 'Cursor',
+        icon: cursor,
+      },
+      {
+        name: 'Vercel',
+        icon: v0,
+      },
+      {
+        name: 'OpenAI Codex',
+        icon: codex,
+      },
+      {
+        name: 'Claude',
+        icon: claude,
+      },
+    ],
   },
 ];
 
 const experiences = [
   {
-    title: 'Senior Javascript Engineer',
+    title: 'Senior JavaScript Engineer',
     company_name: 'Qed42',
     icon: qed42,
     iconBg: '#E6DEDD',
     date: 'April 2024 - Present',
+    chips: ['Next.js', 'Strapi', 'SEO', 'Core Web Vitals', "Accessibility"],
     points: [
-      'Improving web performance of kotaksecurities.com and core web vitals for better user experience and SEO rankings.',
-      'Identifying and resolving issues in deployed production websites to ensure stability and seamless user experience.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-      'Working closely with clients and cross-functional teams to gather requirements and align tasks with the development team for effective execution.',
+      'Leading an 8-member frontend team across sprint planning, technical design reviews, task allocation, and production releases.',
+      'Directed the frontend migration from kotaksecurities.com to kotakneo.com, ensuring a zero-disruption domain transition for a platform serving 150+ page types.',
+      'Led the migration from Next.js 12 to 15 with zero downtime, reducing technical debt and improving build performance.',
+      'Driving platform-wide UX modernization initiatives to improve engagement and conversion.',
+      'Overseeing a platform generating 674K+ clicks and 194M+ impressions in Google Search Console, keeping performance and SEO integrity high at scale.',
     ],
   },
   {
-    title: 'Javascript Engineer',
+    title: 'JavaScript Engineer - Next.js',
     company_name: 'Qed42',
     icon: qed42,
     iconBg: '#E6DEDD',
     date: 'January 2022 - March 2024',
+    chips: ['Next.js', 'Strapi', 'SEO', 'Core Web Vitals','Component Library', 'Mentoring'],
     points: [
-      'Designed and implemented pre-login static pages for the Kotak Securities website, highlighting various financial products and enhancing user engagement.',
-      'Created a scalable and reusable components library for Kotak Securities, ensuring design consistency and efficient development workflows across multiple projects.',
-      'Optimized the performance of web pages by leveraging Static Site Generation (SSG) and Server-Side Rendering (SSR) for faster loading times and improved SEO.',
-      'Worked closely with backend developers and product managers to ensure seamless integration and alignment with business requirements.',
-      'Focused on responsive and accessible designs to deliver a user-friendly experience across devices.',
+      'Improved Core Web Vitals from the 20-30 range to 60-70 by resolving complex performance bottlenecks on kotaksecurities.com.',
+      'Built SEO-optimized pre-login pages that improved product discoverability.',
+      'Architected a reusable component library, cutting development time and enforcing design consistency across projects.',
+      'Implemented SSG/SSR strategies to boost page speed and SEO performance.',
+      'Mentored fellow engineers and conducted code reviews to improve engineering quality.',
     ],
   },
   {
@@ -126,12 +206,13 @@ const experiences = [
     company_name: 'Squareboat',
     icon: squareboat,
     iconBg: '#383E56',
-    date: 'May 2021 - January 2022',
+    date: 'July 2021 - January 2022',
+    chips: ['React', 'Redux', 'Strapi', 'Accessibility'],
     points: [
-      'Worked on Strapi CMS for the content management of the Star Health Insurance website, ensuring seamless updates and efficient handling of dynamic content.',
-      'Contributed to the frontend development of the Star Health Insurance website using React.js, focusing on responsive designs and user-friendly interfaces.',
-      'Developed a feature-rich dashboard for a US-based company, Humanity Health, using React.js, Redux, and React Router, providing an intuitive user experience and robust state management.',
-      'Delivered a responsive and accessible dashboard, ensuring usability across devices and adhering to accessibility standards.',
+      'Developed a feature-rich dashboard for the US-based client Humanity Health using React and Redux, with an intuitive UX and robust state management.',
+      'Delivered accessible, cross-device usability aligned with accessibility standards.',
+      "Managed content updates for Star Health Insurance's website via Strapi CMS, streamlining dynamic content handling.",
+      'Built responsive, user-friendly interfaces for the Star Health Insurance website using React.js.',
     ],
   },
   {
@@ -140,12 +221,23 @@ const experiences = [
     icon: rapid,
     iconBg: '#E6DEDD',
     date: 'January 2021 - May 2021',
+    chips: ['Solidity', 'Web3.js', 'Blockchain'],
     points: [
-      'Gained experience in developing and deploying blockchain smart contracts using Solidity.',
-      'Integrated smart contracts into React applications for seamless blockchain interaction.',
-      'Worked with Web3.js to handle blockchain transactions and interactions.',
-      'Explored decentralized application (dApp) development with blockchain and modern web technologies.',
-      'Focused on optimizing smart contracts for gas efficiency and ensuring security.',
+      'Developed and deployed Solidity smart contracts, integrating them into React apps for blockchain interaction.',
+      'Integrated Web3.js for blockchain transaction management and dApp interactions.',
+      'Optimized smart contracts for gas efficiency and security.',
+    ],
+  },
+  {
+    title: 'Trainee Software Developer',
+    company_name: 'Videtorrium',
+    icon: web,
+    iconBg: '#E6DEDD',
+    date: 'September 2020 - December 2020',
+    chips: ['React', 'Material UI', 'Redux', 'Firebase', 'Razorpay'],
+    points: [
+      'Built a web app for Videtorrium Students Conclave using React.js, Material UI, and Redux so students could discover and register for events.',
+      'Integrated Firebase and Razorpay for event management and payment processing.',
     ],
   },
 ];
@@ -162,77 +254,122 @@ const testimonials = [
   },
 ];
 
-const projects = [
+const blogPosts = [
   {
-    name: 'Fullstack project: PeTrack',
+    title: 'Building Smarter UI Overlays with React Portals',
     description:
-      'PetTrack lets pet owners list their pets with QR codes on collars, helping find lost pets quickly and reunite them with their owners.',
+      'A blog on building reliable overlays and modal experiences with React Portals.',
+    tags: [
+      {
+        name: 'React',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Portals',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'UI',
+        color: 'pink-text-gradient',
+      },
+    ],
+    publishedAt: '5 April 2025',
+    readTime: '6 min read',
+    articleLink:
+      'https://medium.com/@amngoyal/building-smarter-ui-overlays-with-react-portals-c4355892d9a5',
+  },
+  {
+    title: 'How to create a custom snackbar in Next.js 14 using Tailwind CSS',
+    description:
+      'A practical write-up on building a polished snackbar pattern with Next.js and Tailwind CSS.',
     tags: [
       {
         name: 'Next.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'TailwindCSS',
+        name: 'Tailwind',
         color: 'green-text-gradient',
       },
       {
-        name: 'Node Js',
-        color: 'pink-text-gradient',
-      },
-      {
-        name: 'Express Js',
-        color: 'pink-text-gradient',
-      },
-      {
-        name: 'Mongo Db',
+        name: 'UX',
         color: 'pink-text-gradient',
       },
     ],
-    image: carrent,
-    source_code_link: 'https://github.com/',
+    publishedAt: '8 July 2024',
+    readTime: '7 min read',
+    articleLink:
+      'https://medium.com/@amngoyal/how-to-create-a-custom-snackbar-in-next-js-14-using-tailwind-css-69b17322ad49',
   },
   {
-    name: 'Job IT',
+    title: 'Getting started with Strapi',
     description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+      'A short tech talk on building content-driven experiences with Strapi and practical CMS workflows.',
     tags: [
       {
-        name: 'react',
+        name: 'Strapi',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
+        name: 'YouTube',
         color: 'green-text-gradient',
       },
       {
-        name: 'scss',
+        name: 'CMS',
         color: 'pink-text-gradient',
       },
     ],
-    image: jobit,
-    source_code_link: 'https://github.com/',
+    publishedAt: '30 August 2021',
+    readTime: '60 min watch',
+    articleLink: 'https://youtu.be/Jy_7e6qfAvk',
+    actionLabel: 'Watch Video',
   },
+];
+
+const personalProjects = [
   {
-    name: 'Trip Guide',
+    title: 'Union Marine Management Services',
     description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      'A polished web experience for a maritime services brand focused on trust, clarity, and lead generation.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'Website',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'Brand',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'UX',
         color: 'pink-text-gradient',
       },
     ],
-    image: tripguide,
-    source_code_link: 'https://github.com/',
+    liveLink: 'https://unimarships.com/',
+    githubLink: '',
+    caseStudyLink: '',
+  },
+  {
+    title: 'The Qualidad',
+    description:
+      'A modern marketing site built to present the brand cleanly and convert visitors into inquiries.',
+    tags: [
+      {
+        name: 'Website',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Marketing',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'Frontend',
+        color: 'pink-text-gradient',
+      },
+    ],
+    liveLink: 'https://thequalidad.com/',
+    githubLink: '',
+    caseStudyLink: '',
   },
 ];
 
@@ -240,22 +377,29 @@ const contactLinks = [
   {
     name: 'Twitter',
     imgSrc: '/twit.svg',
-    href: 'https://x.com/amngoyal_',
+    href: 'https://x.com/amngoyal',
     alt: "Twitter",
   },
   {
     name: 'GitHub',
     imgSrc: '/git.svg',
     href: 'https://github.com/amngoyal',
-    alt: "Github",
+    alt: 'Github',
   },
   {
     name: 'LinkedIn',
     imgSrc: '/link.svg',
     href: 'https://www.linkedin.com/in/amngoyal/',
-    alt: "Linkedin",
+    alt: 'Linkedin',
   },
 ];
 
-export { contactLinks, experiences, projects, services, technologies, testimonials };
-
+export {
+  blogPosts,
+  contactLinks,
+  experiences,
+  personalProjects,
+  services,
+  skillGroups,
+  testimonials,
+};

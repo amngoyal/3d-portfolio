@@ -180,7 +180,7 @@ const experiences = [
     clients: [
       {
         name: 'Client - Kotak Neo (formerly Kotak Securities)',
-        chips: ['Next.js', 'Strapi', 'SEO', 'Core Web Vitals', 'Accessibility'],
+        chips: ['Next.js', 'Strapi', 'TailwindCSS', 'SEO', 'Core Web Vitals', 'Accessibility'],
         points: [
           'Leading an 8-member frontend team across sprint planning, technical design reviews, task allocation, and production releases.',
           'Directed the frontend migration from kotaksecurities.com to kotakneo.com, ensuring a zero-disruption domain transition for a platform serving 150+ page types.',
@@ -200,7 +200,7 @@ const experiences = [
     clients: [
       {
         name: 'Client - Kotak Neo (formerly Kotak Securities)',
-        chips: ['Next.js', 'Strapi', 'SEO', 'Core Web Vitals', 'Component Library', 'Mentoring'],
+        chips: ['Next.js', 'Strapi', 'MUI', 'SEO', 'Core Web Vitals', 'Component Library'],
         points: [
           'Improved Core Web Vitals from the 20-30 range to 60-70 by resolving complex performance bottlenecks on kotaksecurities.com.',
           'Built SEO-optimized pre-login pages that improved product discoverability.',
@@ -220,7 +220,7 @@ const experiences = [
     clients: [
       {
         name: 'Client - Humanity Health',
-        chips: ['React', 'Redux', 'Strapi'],
+        chips: ['React', 'Redux'],
         points: [
           'Developed a feature-rich dashboard for the US-based client Humanity Health using React and Redux, with an intuitive UX and robust state management.',
           'Delivered accessible, cross-device usability aligned with accessibility standards.',
@@ -228,7 +228,7 @@ const experiences = [
       },
       {
         name: 'Client - Star Health Insurance',
-        chips: ['React', 'Redux', 'Strapi'],
+        chips: ['React', 'Strapi'],
         points: [
           "Managed content updates for Star Health Insurance's website via Strapi CMS, streamlining dynamic content handling.",
           'Built responsive, user-friendly interfaces for the Star Health Insurance website using React.js.',

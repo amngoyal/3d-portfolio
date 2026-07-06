@@ -177,13 +177,18 @@ const experiences = [
     icon: qed42,
     iconBg: '#E6DEDD',
     date: 'April 2024 - Present',
-    chips: ['Next.js', 'Strapi', 'SEO', 'Core Web Vitals', "Accessibility"],
-    points: [
-      'Leading an 8-member frontend team across sprint planning, technical design reviews, task allocation, and production releases.',
-      'Directed the frontend migration from kotaksecurities.com to kotakneo.com, ensuring a zero-disruption domain transition for a platform serving 150+ page types.',
-      'Led the migration from Next.js 12 to 15 with zero downtime, reducing technical debt and improving build performance.',
-      'Driving platform-wide UX modernization initiatives to improve engagement and conversion.',
-      'Overseeing a platform generating 674K+ clicks and 194M+ impressions in Google Search Console, keeping performance and SEO integrity high at scale.',
+    clients: [
+      {
+        name: 'Client - Kotak Neo (formerly Kotak Securities)',
+        chips: ['Next.js', 'Strapi', 'SEO', 'Core Web Vitals', 'Accessibility'],
+        points: [
+          'Leading an 8-member frontend team across sprint planning, technical design reviews, task allocation, and production releases.',
+          'Directed the frontend migration from kotaksecurities.com to kotakneo.com, ensuring a zero-disruption domain transition for a platform serving 150+ page types.',
+          'Led the migration from Next.js 12 to 15 with zero downtime, reducing technical debt and improving build performance.',
+          'Driving platform-wide UX modernization initiatives to improve engagement and conversion.',
+          'Overseeing a platform generating 674K+ clicks and 194M+ impressions in Google Search Console, keeping performance and SEO integrity high at scale.',
+        ],
+      },
     ],
   },
   {
@@ -192,13 +197,18 @@ const experiences = [
     icon: qed42,
     iconBg: '#E6DEDD',
     date: 'January 2022 - March 2024',
-    chips: ['Next.js', 'Strapi', 'SEO', 'Core Web Vitals','Component Library', 'Mentoring'],
-    points: [
-      'Improved Core Web Vitals from the 20-30 range to 60-70 by resolving complex performance bottlenecks on kotaksecurities.com.',
-      'Built SEO-optimized pre-login pages that improved product discoverability.',
-      'Architected a reusable component library, cutting development time and enforcing design consistency across projects.',
-      'Implemented SSG/SSR strategies to boost page speed and SEO performance.',
-      'Mentored fellow engineers and conducted code reviews to improve engineering quality.',
+    clients: [
+      {
+        name: 'Client - Kotak Neo (formerly Kotak Securities)',
+        chips: ['Next.js', 'Strapi', 'SEO', 'Core Web Vitals', 'Component Library', 'Mentoring'],
+        points: [
+          'Improved Core Web Vitals from the 20-30 range to 60-70 by resolving complex performance bottlenecks on kotaksecurities.com.',
+          'Built SEO-optimized pre-login pages that improved product discoverability.',
+          'Architected a reusable component library, cutting development time and enforcing design consistency across projects.',
+          'Implemented SSG/SSR strategies to boost page speed and SEO performance.',
+          'Mentored fellow engineers and conducted code reviews to improve engineering quality.',
+        ],
+      },
     ],
   },
   {
@@ -207,13 +217,25 @@ const experiences = [
     icon: squareboat,
     iconBg: '#383E56',
     date: 'July 2021 - January 2022',
-    chips: ['React', 'Redux', 'Strapi', 'Accessibility'],
-    points: [
-      'Developed a feature-rich dashboard for the US-based client Humanity Health using React and Redux, with an intuitive UX and robust state management.',
-      'Delivered accessible, cross-device usability aligned with accessibility standards.',
-      "Managed content updates for Star Health Insurance's website via Strapi CMS, streamlining dynamic content handling.",
-      'Built responsive, user-friendly interfaces for the Star Health Insurance website using React.js.',
+    clients: [
+      {
+        name: 'Client - Humanity Health',
+        chips: ['React', 'Redux', 'Strapi'],
+        points: [
+          'Developed a feature-rich dashboard for the US-based client Humanity Health using React and Redux, with an intuitive UX and robust state management.',
+          'Delivered accessible, cross-device usability aligned with accessibility standards.',
+        ],
+      },
+      {
+        name: 'Client - Star Health Insurance',
+        chips: ['React', 'Redux', 'Strapi'],
+        points: [
+          "Managed content updates for Star Health Insurance's website via Strapi CMS, streamlining dynamic content handling.",
+          'Built responsive, user-friendly interfaces for the Star Health Insurance website using React.js.',
+        ],
+      },
     ],
+   
   },
   {
     title: 'Trainee Software Developer',
@@ -221,11 +243,16 @@ const experiences = [
     icon: rapid,
     iconBg: '#E6DEDD',
     date: 'January 2021 - May 2021',
-    chips: ['Solidity', 'Web3.js', 'Blockchain'],
-    points: [
-      'Developed and deployed Solidity smart contracts, integrating them into React apps for blockchain interaction.',
-      'Integrated Web3.js for blockchain transaction management and dApp interactions.',
-      'Optimized smart contracts for gas efficiency and security.',
+    clients: [
+      {
+        name: '',
+        chips: ['Solidity', 'Web3.js', 'Blockchain'],
+        points: [
+          'Developed and deployed Solidity smart contracts, integrating them into React apps for blockchain interaction.',
+          'Integrated Web3.js for blockchain transaction management and dApp interactions.',
+          'Optimized smart contracts for gas efficiency and security.',
+        ],
+      },
     ],
   },
   {
@@ -234,10 +261,15 @@ const experiences = [
     icon: web,
     iconBg: '#E6DEDD',
     date: 'September 2020 - December 2020',
-    chips: ['React', 'Material UI', 'Redux', 'Firebase', 'Razorpay'],
-    points: [
-      'Built a web app for Videtorrium Students Conclave using React.js, Material UI, and Redux so students could discover and register for events.',
-      'Integrated Firebase and Razorpay for event management and payment processing.',
+    clients: [
+      {
+        name: '',
+        chips: ['React', 'Material UI', 'Redux', 'Firebase', 'Razorpay'],
+        points: [
+          'Built a web app for Videtorrium Students Conclave using React.js, Material UI, and Redux so students could discover and register for events.',
+          'Integrated Firebase and Razorpay for event management and payment processing.',
+        ],
+      },
     ],
   },
 ];

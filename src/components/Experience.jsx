@@ -84,26 +84,58 @@ const ExperienceCard = ({ experience }) => {
             </p> */}
           </div>
         </div>
-      <ul className="space-y-2 mt-5 ml-5 list-disc">
-        {experience.points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="pl-1 text-[14px] text-white-100 tracking-wider leading-6"
-          >
-            {highlightText(point)}
-          </li>
-        ))}
-      </ul>
-      <div className="flex flex-wrap gap-2 mt-6">
-        {experience.chips.map((chip) => (
-          <span
-            key={chip}
-            className="rounded-full border border-[#915eff]/30 bg-[#915eff]/10 px-3 py-1 text-[12px] font-medium text-[#cbb6ff]"
-          >
-            {chip}
-          </span>
-        ))}
-      </div>
+      {experience.clients && experience.clients.length ? (
+        <div className="mt-5">
+          {experience.clients.map((client, cIdx) => (
+            <div key={`client-${cIdx}`} className="mb-6">
+              <p className="!m-0 font-semibold text-[15px] text-white">{client.name}</p>
+              <ul className="space-y-2 mt-3 ml-5 list-disc">
+                {(client.points || []).map((point, index) => (
+                  <li
+                    key={`experience-point-${cIdx}-${index}`}
+                    className="pl-1 text-[14px] text-white-100 tracking-wider leading-6"
+                  >
+                    {highlightText(point)}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-3">
+                {(client.chips || []).map((chip) => (
+                  <span
+                    key={`${chip}-${cIdx}`}
+                    className="rounded-full border border-[#915eff]/30 bg-[#915eff]/10 px-3 py-1 text-[12px] font-medium text-[#cbb6ff]"
+                  >
+                    {chip}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <>
+          <ul className="space-y-2 mt-5 ml-5 list-disc">
+            {experience.points.map((point, index) => (
+              <li
+                key={`experience-point-${index}`}
+                className="pl-1 text-[14px] text-white-100 tracking-wider leading-6"
+              >
+                {highlightText(point)}
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-wrap gap-2 mt-6">
+            {experience.chips.map((chip) => (
+              <span
+                key={chip}
+                className="rounded-full border border-[#915eff]/30 bg-[#915eff]/10 px-3 py-1 text-[12px] font-medium text-[#cbb6ff]"
+              >
+                {chip}
+              </span>
+            ))}
+          </div>
+        </>
+      )}
     </VerticalTimelineElement>
   );
 };
@@ -115,8 +147,15 @@ ExperienceCard.propTypes = {
     icon: PropTypes.string.isRequired,
     company_name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    points: PropTypes.arrayOf(PropTypes.string).isRequired,
-    chips: PropTypes.arrayOf(PropTypes.string).isRequired,
+    clients: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        chips: PropTypes.arrayOf(PropTypes.string),
+        points: PropTypes.arrayOf(PropTypes.string),
+      })
+    ),
+    points: PropTypes.arrayOf(PropTypes.string),
+    chips: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };
 
